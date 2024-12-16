@@ -8,7 +8,7 @@ Our goal is to build a CNN (Convolutional neural network) and compare it to ViT 
 
 #### Data 
 
-We are going to use the DeepGlobe dataset, containing somewhere about 6000 training and 500 testing images and their masks. If necessary, we will acquire more datasets, as there are many available online. To name a few: Massachusetts Roads Dataset, SpaceNet. 
+We are going to use the [DeepGlobe dataset](https://www.kaggle.com/datasets/balraj98/deepglobe-road-extraction-dataset), containing somewhere about 6000 training and 500 testing images and their masks. If necessary, we will acquire more datasets, as there are many available online. To name a few: [Massachusetts Roads Dataset](https://www.kaggle.com/datasets/balraj98/massachusetts-roads-dataset), [SpaceNet](https://spacenet.ai/spacenet-roads-dataset/). 
 
 #### Design of networks  
 we will draw inspiration from these models and papers: 
@@ -33,7 +33,7 @@ xkovac61
 - Implementation of the CNN. 
 
 xkrizd03 
-- Evaluation and comparison of CNN and ViT (from mentioned paper). 
+- Evaluation and comparison of CNN and [ViT](https://www.sciencedirect.com/science/article/pii/S1569843222001789) (from mentioned paper). 
 
 This division is only preliminary, and it is a subject of change. It is probable (and desirable) that all members of the team are going to actively contribute to the design and implementation of networks and to the final writing of documentation. 
 
