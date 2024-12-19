@@ -27,17 +27,15 @@ class DeepGlobe(Dataset):
             img         3 x 1024 x 1024     float32     [0.0, 1.0]
             mask        1024 x 1024         uint8       {0(background), 1(road)}
         '''
-        row = self.metadata.iloc[idx]
-
+        row = self.metadata.iloc[idx % len(self.metadata)]
         sat_image_path = os.path.join(self.dataset_dir, row['sat_image_path'])
         sat_image = cv2.imread(sat_image_path, cv2.IMREAD_COLOR)
-        sat_image = cv2.cvtColor(sat_image, cv2.COLOR_BGR2RGB) #convert to RGB because opencv..
-        sat_image = torch.tensor(sat_image, dtype=torch.float32).permute(2, 0, 1) / 255.0 #convert to 3x1024x1024 and normalize to [0,1] for convolution layers
+        sat_image = cv2.cvtColor(sat_image, cv2.COLOR_BGR2RGB)                              #convert to RGB because opencv..
+        sat_image = torch.tensor(sat_image, dtype=torch.float32).permute(2, 0, 1) / 255.0   #convert to 3x1024x1024 and normalize to [0,1] for convolution layers
 
         if 'train' in self.type:
             mask_path = os.path.join(self.dataset_dir, row['mask_path'])
             mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)
             mask = torch.tensor(mask > 127, dtype=torch.uint8) #road 1 background 0
-            return sat_image, mask
+            return sat_image, mask.unsqueeze(0)
         return sat_image, None
-    

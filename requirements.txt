@@ -3,4 +3,5 @@ pandas
 numpy
 matplotlib
 opencv-python
-segmentation-models-pytorch
+git+https://github.com/qubvel/segmentation_models.pytorch
+pytorch_lightning
