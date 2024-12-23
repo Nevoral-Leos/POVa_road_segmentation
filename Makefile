@@ -1,12 +1,12 @@
 ENV_DIR = env
 PYTHON = python3
 SRC_DIR = src
-DATA_DIR=data
+DATA_DIR = data
 SCRIPT = $(SRC_DIR)/main.py
-DEEP_GLOBE_DATASET_URL=https://www.kaggle.com/api/v1/datasets/download/balraj98/deepglobe-road-extraction-dataset
-DEEP_GLOBE_ARCHIVE=$(DATA_DIR)/deepglobe-road-extraction-dataset.zip
-MASSACHUSETTS_DATASET_URL=https://www.kaggle.com/api/v1/datasets/download/balraj98/massachusetts-roads-dataset
-MASSACHUSETTS_ARCHIVE=$(DATA_DIR)/massachusetts-roads-dataset.zip
+DEEP_GLOBE_DATASET_URL = https://www.kaggle.com/api/v1/datasets/download/balraj98/deepglobe-road-extraction-dataset
+DEEP_GLOBE_ARCHIVE = $(DATA_DIR)/deepglobe-road-extraction-dataset.zip
+MASSACHUSETTS_DATASET_URL = https://www.kaggle.com/api/v1/datasets/download/balraj98/massachusetts-roads-dataset
+MASSACHUSETTS_ARCHIVE = $(DATA_DIR)/massachusetts-roads-dataset.zip
 
 all: run
 
