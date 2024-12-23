@@ -3,3 +3,5 @@ env
 src/__pycache__
 results
 lightning_logs
+**/.ipynb_checkpoints
+**/__pycache__
