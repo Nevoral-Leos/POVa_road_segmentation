@@ -9,9 +9,9 @@ import torch
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "CPU")
 METRICS = [
     IoU(threshold=0.5),
-#    Fscore(),
-#    Precision(),
-#    Recall()
+    Fscore(),
+    Precision(),
+    Recall()
 ]
 CLASSES = ["background", "road"]
 
