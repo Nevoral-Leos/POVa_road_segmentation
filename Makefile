@@ -1,6 +1,6 @@
 ENV_DIR = env
 PYTHON = python3
-SRC_DIR = src
+SRC_DIR = src/DeepGlobe
 DATA_DIR = data
 SCRIPT = $(SRC_DIR)/main.py
 DEEP_GLOBE_DATASET_URL = https://www.kaggle.com/api/v1/datasets/download/balraj98/deepglobe-road-extraction-dataset
