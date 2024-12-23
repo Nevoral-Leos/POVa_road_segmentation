@@ -1,1 +1,3 @@
-best_model.pth
+best_model
+deeplab_best_model
+segformer_best_model

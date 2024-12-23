@@ -4,17 +4,6 @@ import cv2
 import numpy as np
 
 def one_hot_encode(label, label_values):
-    """
-    Convert a segmentation image label array to one-hot format
-    by replacing each pixel value with a vector of length num_classes
-    # Arguments
-        label: The 2D array segmentation image label
-        label_values
-        
-    # Returns
-        A 2D array with the same width and hieght as the input, but
-        with a depth size of num_classes
-    """
     semantic_map = []
     for colour in label_values:
         equality = np.equal(label, colour)
